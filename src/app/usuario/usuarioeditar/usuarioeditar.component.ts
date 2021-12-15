@@ -29,7 +29,6 @@ export class UsuarioeditarComponent implements OnInit {
       contrasena: inputPassword,
       estado: inputEstado,
       tarea: inputTarea
-  
     };
 
     this.usuarioService.editarUsuario(parseInt("1"),nuevoUsuario);
