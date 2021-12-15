@@ -14,18 +14,18 @@ export class RestauranteService {
 
   // hace una lista desde interfaces usuario
   listarRestaurante(){
-    this.http.get<Restaurante[]>('http://127.0.0.1:8080/api/restaurante')
+    this.http.get<Restaurante[]>('http://127.0.0.1:8081/api/restaurante')
     .subscribe((respuesta: any) => {
       this.lista = respuesta;
     });
   }
 
   agregarRestaurante(restaurante: Restaurante){
-    this.http.post<any>('http://127.0.0.1:8080/api/restaurante', restaurante).subscribe();
+    this.http.post<any>('http://127.0.0.1:8081/api/restaurante', restaurante).subscribe();
   }
 
   eliminarRestaurante(id:number){
-    this.http.delete<any>('http://127.0.0.1:8080/api/restaurante/'+ id).subscribe();
+    this.http.delete<any>('http://127.0.0.1:8081/api/restaurante/'+ id).subscribe();
   }
 
 }

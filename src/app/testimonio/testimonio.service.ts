@@ -13,18 +13,18 @@ export class TestimonioService {
 
   // hace una lista desde interfaces usuario
   listarTestimonio(){
-    this.http.get<Testimonio[]>('http://127.0.0.1:8080/api/testimonio')
+    this.http.get<Testimonio[]>('http://127.0.0.1:8081/api/testimonio')
     .subscribe((respuesta: any) => {
       this.lista = respuesta;
     });
   }
 
   agregarTestimonio(testimonio: Testimonio){
-    this.http.post<any>('http://127.0.0.1:8080/api/testimonio', testimonio).subscribe();
+    this.http.post<any>('http://127.0.0.1:8081/api/testimonio', testimonio).subscribe();
   }
 
   eliminarTestimonio(id:number){
-    this.http.delete<any>('http://127.0.0.1:8080/api/testimonio/'+ id).subscribe();
+    this.http.delete<any>('http://127.0.0.1:8081/api/testimonio/'+ id).subscribe();
   }
 
 }
